@@ -30,7 +30,7 @@
 
     <header-file src="ios/UniversalAnalyticsPlugin.h" />
     <source-file src="ios/UniversalAnalyticsPlugin.m" />
-    <pod id="GoogleAnalytics" />
+    <pod id="Google/Analytics" />
 
     <framework src="SystemConfiguration.framework" />
     <framework src="CoreData.framework" />
