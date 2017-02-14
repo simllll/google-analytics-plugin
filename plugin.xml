@@ -28,7 +28,7 @@
       <array>
         <dict>
           <key>FirebaseAppDelegateProxyEnabled</key>
-	        <string>NO</string>
+	        <boolean>NO</boolean>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
