@@ -27,6 +27,8 @@
     <config-file target="*-Info.plist" parent="CFBundleURLTypes">
       <array>
         <dict>
+          <key>FirebaseAppDelegateProxyEnabled</key>
+	        <string>NO</string>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
