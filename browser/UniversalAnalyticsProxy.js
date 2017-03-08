@@ -17,6 +17,7 @@ function UniversalAnalyticsProxy() {
     'setAppVersion',
     'setOptOut',
     'setUserId',
+    'setClientId',
     'startTrackerWithId',
     'trackEvent',
     'trackException',
@@ -36,9 +37,22 @@ UniversalAnalyticsProxy.prototype = {
     });
     this._ga('set', 'appName', document.title);
   }),
+  
+  setClientId: wrap(function (clientId) {
+    // reinit with client id - not sure if this works, but doesnt really matter on web clients
+    this._ga('create', {
+      trackingId: this._trackingId,
+      clientId: clientId,
+      cookieDomain: 'auto'
+    });
+  }),
 
   setUserId: wrap(function (userId) {
     this._ga('set', 'userId', userId);
+  }),
+  
+  setClientId: wrap(function (clientId) {
+    this._ga('set', 'clientId', clientId);
   }),
 
   setAnonymizeIp: wrap(function (anonymize) {
